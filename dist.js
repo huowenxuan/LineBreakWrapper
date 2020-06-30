@@ -15221,7 +15221,6 @@
   }();
 
   // const EventEmitter = require('events')
-
   // const LineBreaker = require('linebreak')
 
   var openFont = async function openFont(path) {
@@ -15324,6 +15323,7 @@
       this.ellipsis = options.ellipsis;
       this.features = options.features;
       this.font = options.font;
+      this.lines = [];
 
       // 这里
       // this.on('firstLine', options => {
@@ -15465,15 +15465,16 @@
         options.align = align;
       }
 
-      this.onNewLine && this.onNewLine(text, options);
+      this.lines.push(text);
+      // this.onNewLine && this.onNewLine(text, options)
     };
 
     LineBreakWrapper.prototype.willSectionStart = function willSectionStart(options) {
-      this.onSectionStart && this.onSectionStart(options);
+      // this.onSectionStart && this.onSectionStart(options)
     };
 
     LineBreakWrapper.prototype.willSectionEnd = function willSectionEnd(options) {
-      this.onSectionEnd && this.onSectionEnd(options);
+      // this.onSectionEnd && this.onSectionEnd(options)
     };
 
     LineBreakWrapper.prototype.willFirstLine = function willFirstLine(options) {
@@ -15485,8 +15486,8 @@
       this._newLineParams = {
         indent: indent,
         continued: options.continued
+        // this.onFirstLine && this.onFirstLine(options)
       };
-      this.onFirstLine && this.onFirstLine(options);
     };
 
     LineBreakWrapper.prototype.willLastLine = function willLastLine(options) {
@@ -15495,11 +15496,12 @@
       if (align === 'justify') {
         options.align = 'left';
       }
-      this._lastLineParams = { align: options.align };
-      this.onLastLine && this.onLastLine(options);
+      this._lastLineParams = { align: options.align
+        // this.onLastLine && this.onLastLine(options)
+      };
     };
 
-    LineBreakWrapper.prototype.wrap = async function wrap(text, options) {
+    LineBreakWrapper.prototype.wrap = function wrap(text, options) {
       var _this = this;
 
       this.refresh();
@@ -15599,15 +15601,17 @@
       // if the wrap is set to be continued, save the X position
       // to start the first line of the next segment at, and reset
       // the y position
-      if (options.continued === true) {
-        if (lc > 1) {
-          this.continuedX = 0;
-        }
-        this.continuedX += options.textWidth || 0;
-        return 0;
-      } else {
-        return this.startX;
-      }
+      // if (options.continued === true) {
+      //   if (lc > 1) {
+      //     this.continuedX = 0
+      //   }
+      //   this.continuedX += options.textWidth || 0
+      //   return 0
+      // } else {
+      //   return this.startX
+      // }
+
+      return this.lines;
     };
 
     return LineBreakWrapper;

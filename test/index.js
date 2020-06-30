@@ -17,14 +17,10 @@ async function run() {
   }
   let wrapper = new LineBreakWrapper(textOptions)
   wrapper.setOptions(20,300)
-  wrapper.onNewLine = (text) => {
-    console.log('onNewLine', text)
-  }
-  wrapper.onSectionEnd = () => {
-    console.log('onSectionEnd')
-  }
-  wrapper.wrap('计费Joe午觉哇囧诶覅将诶鸡尾酒，计费Joe金额为，付金额及', {})
+  let lines = wrapper.wrap('计费Joe午觉哇囧诶覅将诶鸡尾酒，计费Joe金额为，付金额及', {})
+  console.log(lines)
 }
+
 
 
 run()

@@ -3,7 +3,7 @@
 
 ## 运行
 (需要先把字体文件放入 /test/xx.otf)
-npm run build && node test.js
+npm run test
 
 ## 上传前需要构建
 npm run build

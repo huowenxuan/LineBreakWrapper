@@ -2,7 +2,6 @@ import fontkit from './fontkit'
 import LineBreaker from './linebreak'
 
 // const EventEmitter = require('events')
-
 // const LineBreaker = require('linebreak')
 
 export const openFont = async (path)=> {
@@ -99,6 +98,7 @@ export class LineBreakWrapper {
     this.ellipsis = options.ellipsis
     this.features = options.features
     this.font = options.font
+    this.lines = []
 
     // 这里
     // this.on('firstLine', options => {
@@ -247,15 +247,16 @@ export class LineBreakWrapper {
       options.align = align
     }
 
-    this.onNewLine && this.onNewLine(text, options)
+    this.lines.push(text)
+    // this.onNewLine && this.onNewLine(text, options)
   }
 
   willSectionStart(options) {
-    this.onSectionStart && this.onSectionStart(options)
+    // this.onSectionStart && this.onSectionStart(options)
   }
 
   willSectionEnd(options) {
-    this.onSectionEnd && this.onSectionEnd(options)
+    // this.onSectionEnd && this.onSectionEnd(options)
   }
 
   willFirstLine(options) {
@@ -268,7 +269,7 @@ export class LineBreakWrapper {
       indent,
       continued: options.continued,
     }
-    this.onFirstLine && this.onFirstLine(options)
+    // this.onFirstLine && this.onFirstLine(options)
   }
 
   willLastLine(options) {
@@ -277,10 +278,10 @@ export class LineBreakWrapper {
       options.align = 'left'
     }
     this._lastLineParams = {align: options.align}
-    this.onLastLine && this.onLastLine(options)
+    // this.onLastLine && this.onLastLine(options)
   }
 
-  async wrap(text, options) {
+   wrap(text, options) {
     this.refresh()
 
     // override options from previous continued fragments
@@ -378,15 +379,17 @@ export class LineBreakWrapper {
     // if the wrap is set to be continued, save the X position
     // to start the first line of the next segment at, and reset
     // the y position
-    if (options.continued === true) {
-      if (lc > 1) {
-        this.continuedX = 0
-      }
-      this.continuedX += options.textWidth || 0
-      return 0
-    } else {
-      return this.startX
-    }
+    // if (options.continued === true) {
+    //   if (lc > 1) {
+    //     this.continuedX = 0
+    //   }
+    //   this.continuedX += options.textWidth || 0
+    //   return 0
+    // } else {
+    //   return this.startX
+    // }
+
+    return this.lines
   }
 }
 
