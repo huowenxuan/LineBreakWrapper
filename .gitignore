@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+start.sh
+.avoscloud
+.idea
+.vscode
+logs
+run
+coverage
+apidoc
+typings
+# VIM
+*~
+*.swp
+
