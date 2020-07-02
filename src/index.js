@@ -139,6 +139,7 @@ export class LineBreakWrapper {
   setOptions(fontsize, width) {
     this.options.fontSize = fontsize
     this.options.width = width
+    this.fontSize = fontsize
   }
 
   wordWidth(word) {
