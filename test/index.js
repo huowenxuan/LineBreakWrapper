@@ -16,8 +16,8 @@ async function run() {
     characterSpacing: 1,
   }
   let wrapper = new LineBreakWrapper(textOptions)
-  wrapper.setOptions(12,300)
-  let text = '囧妃角儿哦i及饿哦为奇偶发见覅wei就我发分噢诶衣服我出门您参考看好我为欧文哦哦，非我方IE无蜂王浆挤我。。为汇完款好考培。分为非季节覅欧文熊积分胸围就of安康旷视科技'
+  wrapper.setOptions(12, 300)
+  let text = "离开浦口校区，回首看那条从宿舍到教学楼的林荫道。当年的小树长大了许多"
   let lines = wrapper.wrap(text, {})
   console.log(lines)
   console.log(wrapper.wordWidth(text))

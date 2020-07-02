@@ -15367,7 +15367,7 @@
     };
 
     LineBreakWrapper.prototype.wordWidth = function wordWidth(word) {
-      return this.font.widthOfString(word, this.fontSize) + this.characterSpacing * (word.length - 1) + // 未考虑全角/半角
+      return this.font.widthOfString(word, this.fontSize) + this.characterSpacing * word.length + // 未考虑全角/半角
       this.wordSpacing // 暂时无用
       ;
     };
