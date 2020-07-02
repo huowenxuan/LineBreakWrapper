@@ -15366,7 +15366,7 @@
     };
 
     LineBreakWrapper.prototype.wordWidth = function wordWidth(word) {
-      return this.font.widthOfString(word, this.fontSize) + this.characterSpacing + this.wordSpacing;
+      return this.font.widthOfString(word, this.fontSize) + this.characterSpacing * (word.length - 1) + this.wordSpacing;
     };
 
     LineBreakWrapper.prototype.eachWord = function eachWord(text, fn) {

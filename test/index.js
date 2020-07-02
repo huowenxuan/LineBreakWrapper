@@ -13,12 +13,14 @@ async function getFont() {
 async function run() {
   const textOptions = {
     font: await getFont(),
-    characterSpacing: 2,
+    characterSpacing: 1,
   }
   let wrapper = new LineBreakWrapper(textOptions)
-  wrapper.setOptions(20,300)
-  let lines = wrapper.wrap('计费Joe午觉哇囧诶覅将诶鸡尾酒，计费Joe金额为，付金额及', {})
+  wrapper.setOptions(12,300)
+  let text = '囧妃角儿哦i及饿哦为奇偶发见覅wei就我发分噢诶衣服我出门您参考看好我为欧文哦哦，非我方IE无蜂王浆挤我。。为汇完款好考培。分为非季节覅欧文熊积分胸围就of安康旷视科技'
+  let lines = wrapper.wrap(text, {})
   console.log(lines)
+  console.log(wrapper.wordWidth(text))
 }
 
 

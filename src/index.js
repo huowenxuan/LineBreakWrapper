@@ -144,8 +144,8 @@ export class LineBreakWrapper {
   wordWidth(word) {
     return (
       this.font.widthOfString(word, this.fontSize) +
-      this.characterSpacing +
-      this.wordSpacing
+      this.characterSpacing * (word.length - 1) + // 未考虑全角/半角
+      this.wordSpacing // 暂时无用
     )
   }
 
