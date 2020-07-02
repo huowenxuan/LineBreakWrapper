@@ -15363,10 +15363,13 @@
     LineBreakWrapper.prototype.setOptions = function setOptions(fontsize, width) {
       this.options.fontSize = fontsize;
       this.options.width = width;
+      this.fontSize = fontsize;
     };
 
     LineBreakWrapper.prototype.wordWidth = function wordWidth(word) {
-      return this.font.widthOfString(word, this.fontSize) + this.characterSpacing * (word.length - 1) + this.wordSpacing;
+      return this.font.widthOfString(word, this.fontSize) + this.characterSpacing * (word.length - 1) + // 未考虑全角/半角
+      this.wordSpacing // 暂时无用
+      ;
     };
 
     LineBreakWrapper.prototype.eachWord = function eachWord(text, fn) {
