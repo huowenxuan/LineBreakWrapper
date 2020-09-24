@@ -1,14 +1,14 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('babel-runtime/core-js/object/create'), require('babel-runtime/helpers/classCallCheck'), require('babel-runtime/core-js/promise'), require('restructure'), require('babel-runtime/core-js/object/get-own-property-descriptor'), require('babel-runtime/core-js/get-iterator'), require('babel-runtime/core-js/object/freeze'), require('babel-runtime/helpers/typeof'), require('babel-runtime/core-js/object/keys'), require('babel-runtime/core-js/object/define-property'), require('babel-runtime/helpers/createClass'), require('babel-runtime/core-js/map'), require('.'), require('babel-runtime/helpers/possibleConstructorReturn'), require('babel-runtime/helpers/inherits'), require('restructure/src/utils'), require('babel-runtime/core-js/object/define-properties'), require('babel-runtime/core-js/json/stringify'), require('babel-runtime/core-js/object/assign'), require('babel-runtime/core-js/string/from-code-point'), require('babel-runtime/core-js/array/from'), require('babel-runtime/core-js/set'), require('unicode-properties'), require('unicode-trie'), require('dfa'), require('babel-runtime/core-js/number/epsilon'), require('clone'), require('tiny-inflate'), require('brotli/decompress')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'babel-runtime/core-js/object/create', 'babel-runtime/helpers/classCallCheck', 'babel-runtime/core-js/promise', 'restructure', 'babel-runtime/core-js/object/get-own-property-descriptor', 'babel-runtime/core-js/get-iterator', 'babel-runtime/core-js/object/freeze', 'babel-runtime/helpers/typeof', 'babel-runtime/core-js/object/keys', 'babel-runtime/core-js/object/define-property', 'babel-runtime/helpers/createClass', 'babel-runtime/core-js/map', '.', 'babel-runtime/helpers/possibleConstructorReturn', 'babel-runtime/helpers/inherits', 'restructure/src/utils', 'babel-runtime/core-js/object/define-properties', 'babel-runtime/core-js/json/stringify', 'babel-runtime/core-js/object/assign', 'babel-runtime/core-js/string/from-code-point', 'babel-runtime/core-js/array/from', 'babel-runtime/core-js/set', 'unicode-properties', 'unicode-trie', 'dfa', 'babel-runtime/core-js/number/epsilon', 'clone', 'tiny-inflate', 'brotli/decompress'], factory) :
-  (global = global || self, factory((global.dist = global.dist || {}, global.dist.js = {}), global._Object$create, global._classCallCheck, global._Promise, global.r, global._Object$getOwnPropertyDescriptor, global._getIterator, global._Object$freeze, global._typeof, global._Object$keys, global._Object$defineProperty, global._createClass, global._Map, global.Tables, global._possibleConstructorReturn, global._inherits, global.utils, global._Object$defineProperties, global._JSON$stringify, global._Object$assign, global._String$fromCodePoint, global._Array$from, global._Set, global.unicode$1, global.UnicodeTrie$1, global.StateMachine, global._Number$EPSILON, global.cloneDeep, global.inflate, global.brotli));
-}(this, (function (exports, _Object$create, _classCallCheck, _Promise, r, _Object$getOwnPropertyDescriptor, _getIterator, _Object$freeze, _typeof, _Object$keys, _Object$defineProperty, _createClass, _Map, Tables, _possibleConstructorReturn, _inherits, utils, _Object$defineProperties, _JSON$stringify, _Object$assign, _String$fromCodePoint, _Array$from, _Set, unicode$1, UnicodeTrie$1, StateMachine, _Number$EPSILON, cloneDeep, inflate, brotli) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('babel-runtime/core-js/get-iterator'), require('babel-runtime/core-js/object/create'), require('babel-runtime/helpers/classCallCheck'), require('babel-runtime/core-js/promise'), require('restructure'), require('babel-runtime/core-js/object/get-own-property-descriptor'), require('babel-runtime/core-js/object/freeze'), require('babel-runtime/helpers/typeof'), require('babel-runtime/core-js/object/keys'), require('babel-runtime/core-js/object/define-property'), require('babel-runtime/helpers/createClass'), require('babel-runtime/core-js/map'), require('.'), require('babel-runtime/helpers/possibleConstructorReturn'), require('babel-runtime/helpers/inherits'), require('restructure/src/utils'), require('babel-runtime/core-js/object/define-properties'), require('babel-runtime/core-js/json/stringify'), require('babel-runtime/core-js/object/assign'), require('babel-runtime/core-js/string/from-code-point'), require('babel-runtime/core-js/array/from'), require('babel-runtime/core-js/set'), require('unicode-properties'), require('unicode-trie'), require('dfa'), require('babel-runtime/core-js/number/epsilon'), require('clone'), require('tiny-inflate'), require('brotli/decompress')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'babel-runtime/core-js/get-iterator', 'babel-runtime/core-js/object/create', 'babel-runtime/helpers/classCallCheck', 'babel-runtime/core-js/promise', 'restructure', 'babel-runtime/core-js/object/get-own-property-descriptor', 'babel-runtime/core-js/object/freeze', 'babel-runtime/helpers/typeof', 'babel-runtime/core-js/object/keys', 'babel-runtime/core-js/object/define-property', 'babel-runtime/helpers/createClass', 'babel-runtime/core-js/map', '.', 'babel-runtime/helpers/possibleConstructorReturn', 'babel-runtime/helpers/inherits', 'restructure/src/utils', 'babel-runtime/core-js/object/define-properties', 'babel-runtime/core-js/json/stringify', 'babel-runtime/core-js/object/assign', 'babel-runtime/core-js/string/from-code-point', 'babel-runtime/core-js/array/from', 'babel-runtime/core-js/set', 'unicode-properties', 'unicode-trie', 'dfa', 'babel-runtime/core-js/number/epsilon', 'clone', 'tiny-inflate', 'brotli/decompress'], factory) :
+  (global = global || self, factory((global.dist = global.dist || {}, global.dist.js = {}), global._getIterator, global._Object$create, global._classCallCheck, global._Promise, global.r, global._Object$getOwnPropertyDescriptor, global._Object$freeze, global._typeof, global._Object$keys, global._Object$defineProperty, global._createClass, global._Map, global.Tables, global._possibleConstructorReturn, global._inherits, global.utils, global._Object$defineProperties, global._JSON$stringify, global._Object$assign, global._String$fromCodePoint, global._Array$from, global._Set, global.unicode$1, global.UnicodeTrie$1, global.StateMachine, global._Number$EPSILON, global.cloneDeep, global.inflate, global.brotli));
+}(this, (function (exports, _getIterator, _Object$create, _classCallCheck, _Promise, r, _Object$getOwnPropertyDescriptor, _Object$freeze, _typeof, _Object$keys, _Object$defineProperty, _createClass, _Map, Tables, _possibleConstructorReturn, _inherits, utils, _Object$defineProperties, _JSON$stringify, _Object$assign, _String$fromCodePoint, _Array$from, _Set, unicode$1, UnicodeTrie$1, StateMachine, _Number$EPSILON, cloneDeep, inflate, brotli) { 'use strict';
 
+  _getIterator = _getIterator && _getIterator.hasOwnProperty('default') ? _getIterator['default'] : _getIterator;
   _Object$create = _Object$create && _Object$create.hasOwnProperty('default') ? _Object$create['default'] : _Object$create;
   _classCallCheck = _classCallCheck && _classCallCheck.hasOwnProperty('default') ? _classCallCheck['default'] : _classCallCheck;
   _Promise = _Promise && _Promise.hasOwnProperty('default') ? _Promise['default'] : _Promise;
   _Object$getOwnPropertyDescriptor = _Object$getOwnPropertyDescriptor && _Object$getOwnPropertyDescriptor.hasOwnProperty('default') ? _Object$getOwnPropertyDescriptor['default'] : _Object$getOwnPropertyDescriptor;
-  _getIterator = _getIterator && _getIterator.hasOwnProperty('default') ? _getIterator['default'] : _getIterator;
   _Object$freeze = _Object$freeze && _Object$freeze.hasOwnProperty('default') ? _Object$freeze['default'] : _Object$freeze;
   _typeof = _typeof && _typeof.hasOwnProperty('default') ? _typeof['default'] : _typeof;
   _Object$keys = _Object$keys && _Object$keys.hasOwnProperty('default') ? _Object$keys['default'] : _Object$keys;
@@ -15504,24 +15504,16 @@
       };
     };
 
-    LineBreakWrapper.prototype.wrap = function wrap(text, options) {
+    LineBreakWrapper.prototype._wrap = function _wrap(text, options) {
       var _this = this;
 
       this.refresh();
 
       // override options from previous continued fragments
-      if (options.indent != null) {
-        this.indent = options.indent;
-      }
-      if (options.characterSpacing != null) {
-        this.characterSpacing = options.characterSpacing;
-      }
-      if (options.wordSpacing != null) {
-        this.wordSpacing = options.wordSpacing;
-      }
-      if (options.ellipsis != null) {
-        this.ellipsis = options.ellipsis;
-      }
+      if (options.indent != null) this.indent = options.indent;
+      if (options.characterSpacing != null) this.characterSpacing = options.characterSpacing;
+      if (options.wordSpacing != null) this.wordSpacing = options.wordSpacing;
+      if (options.ellipsis != null) this.ellipsis = options.ellipsis;
 
       var buffer = '';
       var textWidth = 0;
@@ -15543,6 +15535,7 @@
       // this.emit('sectionStart', options, this)
 
       this.eachWord(text, function (word, w, bk, last) {
+        console.log(word);
         if (last == null || last.required) {
           _this.willFirstLine(options);
           // 这里
@@ -15615,6 +15608,51 @@
       // }
 
       return this.lines;
+    };
+
+    LineBreakWrapper.prototype.wrap = function wrap(text, options) {
+      var maxWidth = this.options.width;
+      var lines = this._wrap(text, options).filter(function (l) {
+        return !!l;
+      });
+      var leftText = text;
+      var realLines = [];
+
+      while (leftText) {
+        for (var _iterator = lines, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _getIterator(_iterator);;) {
+          var _ref;
+
+          if (_isArray) {
+            if (_i >= _iterator.length) break;
+            _ref = _iterator[_i++];
+          } else {
+            _i = _iterator.next();
+            if (_i.done) break;
+            _ref = _i.value;
+          }
+
+          var line = _ref;
+
+          if (this.wordWidth(line) <= maxWidth) {
+            realLines.push(line);
+            leftText = leftText.replace(line, '');
+          } else {
+            // 如果宽度超过最大宽度，一个字一个字的累加宽度，宽度够了之后开始计算下一行
+            for (var i = 0; i < line.length; i++) {
+              var substr = line.substr(0, i + 1);
+              if (this.wordWidth(substr) > maxWidth) {
+                var str = line.substr(0, i);
+                realLines.push(str);
+                leftText = leftText.replace(str, '');
+                lines = this._wrap(leftText, options);
+                break;
+              }
+            }
+          }
+        }
+      }
+
+      return realLines;
     };
 
     return LineBreakWrapper;

@@ -282,22 +282,14 @@ export class LineBreakWrapper {
     // this.onLastLine && this.onLastLine(options)
   }
 
-   wrap(text, options) {
+   _wrap(text, options) {
     this.refresh()
 
     // override options from previous continued fragments
-    if (options.indent != null) {
-      this.indent = options.indent
-    }
-    if (options.characterSpacing != null) {
-      this.characterSpacing = options.characterSpacing
-    }
-    if (options.wordSpacing != null) {
-      this.wordSpacing = options.wordSpacing
-    }
-    if (options.ellipsis != null) {
-      this.ellipsis = options.ellipsis
-    }
+    if (options.indent != null) this.indent = options.indent
+    if (options.characterSpacing != null) this.characterSpacing = options.characterSpacing
+    if (options.wordSpacing != null) this.wordSpacing = options.wordSpacing
+    if (options.ellipsis != null) this.ellipsis = options.ellipsis
 
     let buffer = ''
     let textWidth = 0
@@ -391,6 +383,38 @@ export class LineBreakWrapper {
     // }
 
     return this.lines
+  }
+
+  /* _wrap在遇到纯英文数字,.@-的长文字时会不换行，强制换行 */
+  wrap(text, options) {
+    let maxWidth = this.options.width
+    let lines = this._wrap(text, options)
+      .filter(l => !!l)
+    let leftText = text
+    let realLines = []
+
+    while (leftText) {
+      for (let line of lines) {
+        if (this.wordWidth(line) <= maxWidth) {
+          realLines.push(line)
+          leftText = leftText.replace(line, '')
+        } else {
+          // 如果宽度超过最大宽度，一个字一个字的累加宽度，宽度够了之后开始计算下一行
+          for (let i = 0; i < line.length; i++) {
+            let substr = line.substr(0, i + 1)
+            if (this.wordWidth(substr) > maxWidth) {
+              let str = line.substr(0, i)
+              realLines.push(str)
+              leftText = leftText.replace(str, '')
+              lines = this._wrap(leftText, options)
+              break
+            }
+          }
+        }
+      }
+    }
+
+    return realLines
   }
 }
 

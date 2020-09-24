@@ -12,5 +12,6 @@ typings
 # VIM
 *~
 *.swp
-test/OPPOSans-R.otf
+test/*.ttf
+test/*.otf
 
