@@ -32,7 +32,7 @@
     "esdoc": "^0.4.8",
     "esdoc-es7-plugin": "0.0.3",
     "iconv-lite": "^0.4.24",
-    "mocha": "^2.0.1",
+    "mocha": "^10.1.0",
     "npm-run-all": "^4.0.2",
     "nyc": "^10.3.2",
     "rollup": "^1.32.0",
